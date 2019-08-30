@@ -1,0 +1,41 @@
+#Please set the subject as "statue | project"
+#the "status" should be "Draft", "Publish", "Discuss", "Update", or others
+#the project should be the name of the repository, or others"
+subject= Draft | RealseSys
+测试
+你好！
+   这是邮件推送系统的初级版本。用来推送仓库的变化情况。
+采用系统的mutt进行推送邮件，收件人用.mailList进行
+存储， 默认的收件人列表在 ~/.mailList中。邮件的内容存在特定的文件Announce中。
+只需要在PATH中加入/besfs/users/lihb/software/SL6/bin即可使用
+    1)bash
+        export PATH=${PATH}:/besfs/users/lihb/software/SL6/bin
+	2)tcsh
+        setenv PATH ${PATH}:/besfs/users/lihb/software/SL6/bin
+   1)Announce的注释用"#"
+   2)设置主题用 
+       subject= Draft | RealseSys
+   系统的使用方法为
+   1)初始化，每个文件夹只需要进行一次初始化，初始化的成功的标志为自动创建了文件
+     Announce
+      RealseSys init
+   2)发送
+      RealseSys send
+      或 RealseSys send -L mailLitFile
+   3)查看帮助 
+      RealseSys -h 
+      RealseSys -help
+   4)mutt的常用功能都能使用，比如
+     *添加附件 -a file 
+
+*mutt的基本设置
+set realname="Group Repository"
+set charset="utf-8"
+set attach_charset="utf-8"
+set send_charset="utf-8:us-ascii:iso-8859-1"
+set config_charset="utf-8"
+my_hdr From:maxx@ihep.ac.cn
+建议把这些内容加入到 ~/.muttrc中
+
+
+
