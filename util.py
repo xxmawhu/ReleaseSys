@@ -109,7 +109,6 @@ class ReleaseHelper(mailHelper):
         if not os.path.isfile(homemailFile):
             print(CREATEMM)
             f = open(homemailFile, 'w')
-            f.write("sunhk@ihep.ac.cn\n")
             f.write("maxx@ihep.ac.cn\n")
             f.close()
         if not os.path.isfile(self._mailList):
