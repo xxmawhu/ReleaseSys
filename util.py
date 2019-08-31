@@ -24,12 +24,12 @@ class mailHelper:
             if ll[0] == "subject":
                 self._subject = ll[1].split("\n")[0]
                 continue
-            self._options[ll[0]] = ll[1]
+            #self._options[ll[0]] = ll[1]
     def _getBody(self):
         s = ''
         for line in open(self._announce).readlines():
-            if line.strip() == "":
-                continue
+            #if line.strip() == "":
+            #    continue
             # strip: to remove the blanck before the #
             if '#' == line.strip()[0]:
                 continue
